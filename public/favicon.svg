@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <clipPath id="circle">
+      <circle cx="256" cy="256" r="256" />
+    </clipPath>
+  </defs>
+
+  <!-- Clip the PNG logo into a circle for a round favicon look -->
+  <g clip-path="url(#circle)">
+    <image href="/KaranLogo.png" x="0" y="0" width="512" height="512" preserveAspectRatio="xMidYMid slice" />
+  </g>
+</svg>
