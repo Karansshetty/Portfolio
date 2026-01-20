@@ -54,26 +54,37 @@ export const EDUCATION = [
 
 export const EXPERIENCE = [
   {
-    year: "",
-    company: "Technical Career Education Private Limited",
-    role: "Student Intern",
-    location: "",
+    year: "Nov 2025 – Present",
+    company: "MicroDegree Educational Pvt. Ltd.",
+    role: "Software Engineer Intern",
+    location: "Mangalore, India",
     bullets: [
-      "Developed and deployed a Task Management web application using the MERN stack.",
-      "Participated in project meetings to surface blockers, align on solutions, and improve team coordination.",
+      "Working as a Software Engineer Intern, developing full-stack web applications using the MERN stack, including RESTful APIs, database operations, and core application features.",
+      "Built responsive user interfaces and collaborated in a real-world development environment using Git and GitHub, following structured workflows and best practices.",
     ],
-    tech: "MongoDB • Express • React • Node.js",
+    tech: "MongoDB • Express • React • Node.js • Git • GitHub",
   },
   {
-    year: "Oct–Nov 2023 • Feb 2025 – May 2025",
+    year: "Feb 2025 – May 2025",
     company: "Thaniya Technologies",
     role: "Full Stack Developer Intern",
     location: "Mangalore, India",
     bullets: [
-      "Contributed to building MERN-stack web applications with a focus on scalable, maintainable implementation.",
-      "Collaborated with cross-functional teams to deliver feature enhancements, triage and fix bugs, and improve application performance.",
+      "Contributed to the development of a MERN-based e-commerce application, focusing on scalable implementation, feature development, and code maintainability.",
+      "Collaborated with cross-functional teams to implement new features, fix bugs, and improve application performance through testing and debugging.",
     ],
-    tech: "MERN Stack",
+    tech: "MongoDB • Express • React • Node.js",
+  },
+  {
+    year: "2023",
+    company: "Technical Career Education Private Limited",
+    role: "Student Intern",
+    location: "",
+    bullets: [
+      "Developed and deployed a Task Management web application using the MERN stack, implementing CRUD operations and backend logic.",
+      "Participated in project discussions to identify blockers, align on solutions, and improve overall team coordination during development.",
+    ],
+    tech: "MongoDB • Express • React • Node.js",
   },
 ];
 

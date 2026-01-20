@@ -653,7 +653,7 @@
 
 .timeline-item {
   display: grid;
-  grid-template-columns: 120px 30px 1fr;
+  grid-template-columns: 180px 30px 1fr;
   gap: 14px;
   align-items: stretch;
 }
@@ -664,6 +664,7 @@
   font-size: 0.95rem;
   font-weight: 600;
   text-align: right;
+  white-space: nowrap;
 }
 
 .timeline-rail {
@@ -1084,7 +1085,7 @@
   }
 
   .timeline-item {
-    grid-template-columns: 92px 26px 1fr;
+    grid-template-columns: 160px 26px 1fr;
   }
 }
 
