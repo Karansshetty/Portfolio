@@ -62,7 +62,7 @@ export const EXPERIENCE = [
       "Working as a Software Engineer Intern, developing full-stack web applications using the MERN stack, including RESTful APIs, database operations, and core application features.",
       "Built responsive user interfaces and collaborated in a real-world development environment using Git and GitHub, following structured workflows and best practices.",
     ],
-    tech: "MongoDB • Express • React • Node.js • Git • GitHub",
+    tech: ["mongodb", "express", "react", "node", "git", "github"],
   },
   {
     year: "Feb 2025 – May 2025",
@@ -73,10 +73,10 @@ export const EXPERIENCE = [
       "Contributed to the development of a MERN-based e-commerce application, focusing on scalable implementation, feature development, and code maintainability.",
       "Collaborated with cross-functional teams to implement new features, fix bugs, and improve application performance through testing and debugging.",
     ],
-    tech: "MongoDB • Express • React • Node.js",
+    tech: ["mongodb", "express", "react", "node", "git", "github"],
   },
   {
-    year: "2023",
+    year: "Oct 2023 – Nov 2023",
     company: "Technical Career Education Private Limited",
     role: "Student Intern",
     location: "",
@@ -84,82 +84,138 @@ export const EXPERIENCE = [
       "Developed and deployed a Task Management web application using the MERN stack, implementing CRUD operations and backend logic.",
       "Participated in project discussions to identify blockers, align on solutions, and improve overall team coordination during development.",
     ],
-    tech: "MongoDB • Express • React • Node.js",
+    tech: ["mongodb", "express", "react", "node", "git", "github"],
   },
 ];
 
 export const SKILLS = [
   {
-    category: "Languages",
-    items: [
-      { name: "Java", icon: "code" },
-      { name: "Python", icon: "code" },
-      { name: "C", icon: "code" },
-      { name: "JavaScript (ES6+)", icon: "js" },
-      { name: "HTML5", icon: "html" },
-      { name: "CSS3", icon: "css" },
-    ],
+    id: "java",
+    name: "Java",
   },
   {
-    category: "Frontend",
-    items: [
-      { name: "React.js", icon: "react" },
-      { name: "Tailwind CSS", icon: "code" },
-      { name: "Bootstrap", icon: "box" },
-    ],
+    id: "python",
+    name: "Python",
   },
   {
-    category: "Backend",
-    items: [
-      { name: "Node.js", icon: "node" },
-      { name: "Express", icon: "server" },
-      { name: "JWT Authentication", icon: "lock" },
-      { name: "RESTful APIs", icon: "api" },
-    ],
+    id: "javascript",
+    name: "JavaScript (ES6+)",
   },
   {
-    category: "Databases",
-    items: [
-      { name: "MySQL", icon: "db" },
-      { name: "MongoDB Atlas", icon: "db" },
-      { name: "Firebase", icon: "db" },
-    ],
+    id: "react",
+    name: "React",
   },
   {
-    category: "Tools",
-    items: [
-      { name: "Git & GitHub", icon: "git" },
-      { name: "Postman", icon: "tool" },
-      { name: "VS Code", icon: "tool" },
-      { name: "Android Studio", icon: "tool" },
-      { name: "Jupyter Notebook", icon: "tool" },
-    ],
+    id: "html",
+    name: "HTML5",
+  },
+  {
+    id: "css",
+    name: "CSS3",
+  },
+  {
+    id: "tailwind",
+    name: "Tailwind CSS",
+  },
+  {
+    id: "node",
+    name: "Node.js",
+  },
+  {
+    id: "express",
+    name: "Express.js",
+  },
+  {
+    id: "rest",
+    name: "REST APIs",
+  },
+  {
+    id: "jwt",
+    name: "JWT Authentication",
+  },
+  {
+    id: "mongodb",
+    name: "MongoDB",
+  },
+  {
+    id: "mysql",
+    name: "MySQL",
+  },
+  {
+    id: "firebase",
+    name: "Firebase",
+  },
+  {
+    id: "git",
+    name: "Git",
+  },
+  {
+    id: "github",
+    name: "GitHub",
+  },
+  {
+    id: "postman",
+    name: "Postman",
+  },
+  {
+    id: "vscode",
+    name: "VS Code",
   },
 ];
 
 export const PROJECTS = [
   {
-    title: "Image to Text and Text to Speech Conversion: Implementing OCR and TTS",
-    stack: "Python • Tesseract OCR • Google Text-to-Speech API",
+    title: "Image to Text & Text to Speech Converter",
+    image: "/ImageToSpeech.PNG",
+    stack: "Python • Tesseract OCR • Google Text-to-Speech",
     description:
-      "Built an accessibility-focused application that converts text in images into spoken audio using OCR and TTS integration.",
-    github: "",
+      "An accessibility-focused application that extracts text from images and converts it into spoken audio.",
+    github: "https://github.com/Karansshetty/Image-Processing-Project",
     demo: "",
   },
   {
     title: "Event Management System",
-    stack: "Apache • JavaScript • HTML • CSS • MySQL",
+    image: "/EventManagementSystem.PNG",
+    stack: "PHP • Apache • MySQL • HTML • CSS • JavaScript",
     description:
-      "Developed and deployed a full-stack event management system to streamline event planning, registration, and execution with CRUD workflows and database-triggered notifications.",
+      "A web-based system for managing events, registrations, and schedules with full CRUD functionality.",
+    github: "https://github.com/Karansshetty/SQL-Projects/tree/main/Event-Management-System-main",
+    demo: "",
+  },
+  {
+    title: "Smart Water Turbidity & Pipeline Monitoring",
+    image: "/SmartWaterTurbidityManagement.jpeg",
+    stack: "ESP32 • Firebase • React • Node.js • Sensors",
+    description:
+      "IoT-based water turbidity and pipeline monitoring system using ESP32 sensors and Firebase, featuring a real-time dashboard with threshold-based alerts for water quality monitoring...",
     github: "",
     demo: "",
   },
   {
-    title: "Smart Water Turbidity and Pipeline Management",
-    stack: "ESP32 • Firebase • React • Node.js • Sensors",
+    title: "iNotebook – Notes Management App",
+    image: "/InoteBookApp.PNG",
+    stack: "MongoDB • Express • React • Node.js",
     description:
-      "Built an IoT-based system for real-time water quality monitoring and threshold-based automation, with remote visualization via a Firebase-backed web interface.",
-    github: "",
+      "A MERN-based notes application with secure authentication, CRUD operations, and user-specific data storage.",
+    github: "https://github.com/Karansshetty/INotebook-App",
+    demo: "",
+  },
+  {
+    title: "Levello - E-Commerce Web Application",
+    image: "/EcommerceApp.PNG",
+    stack: "MongoDB • Express • React • Node.js",
+    description:
+      "Developed a full-stack e-commerce platform with product listings, cart management, authentication, and order workflows.",
+    github: "https://github.com/Karansshetty/Ecommerce-Application",
+    demo: "",
+  },
+  {
+    title: "NewsMonkey - News Aggregator App",
+    image: "/NewsApp.PNG",
+    stack: "MongoDB • Express • React • Node.js • News API",
+    description:
+      "Built a MERN-based news application that fetches and displays real-time news articles using external APIs.",
+    github: "https://github.com/Karansshetty/News-App",
     demo: "",
   },
 ];

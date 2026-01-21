@@ -72,14 +72,43 @@ export default function ContactSection() {
   return (
     <AnimatedSection id="contact" title="Contact" eyebrow="Let’s build something reliable" withHeroBackground>
       <div className="contact-grid">
-        <motion.div className="contact-card" variants={sectionItemVariants}>
+        <motion.aside className="contact-aside" variants={sectionItemVariants}>
+          <h3 className="contact-title">Let's connect</h3>
+          <p className="contact-subtitle contact-message">
+            I'm open to collaborating on projects, internships, and entry-level opportunities.
+            <br />
+            Feel free to reach out if you'd like to discuss ideas, opportunities, or just connect.
+          </p>
+
+          <div className="socials" aria-label="Contact links">
+            <a className="social" href={PROFILE.socials.github} target="_blank" rel="noreferrer">
+              <FaGithub aria-hidden="true" />
+              <span>GitHub</span>
+            </a>
+            <a className="social" href={PROFILE.socials.linkedin} target="_blank" rel="noreferrer">
+              <FaLinkedin aria-hidden="true" />
+              <span>LinkedIn</span>
+            </a>
+            <a className="social" href={`mailto:${PROFILE.email}`}>
+              <FiMail aria-hidden="true" />
+              <span>Email</span>
+            </a>
+            {PROFILE.phone ? (
+              <a className="social" href={`tel:${PROFILE.phone.replace(/\s+/g, "")}`}>
+                <FiPhone aria-hidden="true" />
+                <span>{PROFILE.phone}</span>
+              </a>
+            ) : null}
+          </div>
+        </motion.aside>
+
+        <motion.div className="contact-card contact-formCard" variants={sectionItemVariants}>
           <h3 className="contact-title">Send a message</h3>
           <p className="contact-subtitle">
             Prefer email? Use the form—your message will be sent directly.
           </p>
 
           <form className="contact-form" onSubmit={onSubmit}>
-            {/* Compatibility: common EmailJS template variables */}
             <input type="hidden" name="from_name" value={form.name} />
             <input type="hidden" name="from_email" value={form.email} />
             <input type="hidden" name="reply_to" value={form.email} />
@@ -132,43 +161,6 @@ export default function ContactSection() {
             ) : null}
           </form>
         </motion.div>
-
-        <motion.aside className="contact-aside" variants={sectionItemVariants}>
-          <div className="contact-mini">
-            <h3 className="contact-title">Links</h3>
-            <p className="contact-subtitle">
-              Keep these updated—recruiters will click them.
-            </p>
-            <div className="socials">
-              <a className="social" href={PROFILE.socials.github} target="_blank" rel="noreferrer">
-                <FaGithub aria-hidden="true" />
-                <span>GitHub</span>
-              </a>
-              <a
-                className="social"
-                href={PROFILE.socials.linkedin}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FaLinkedin aria-hidden="true" />
-                <span>LinkedIn</span>
-              </a>
-              <a className="social" href={`mailto:${PROFILE.email}`}>
-                <FiMail aria-hidden="true" />
-                <span>Email</span>
-              </a>
-              {PROFILE.phone ? (
-                <a
-                  className="social"
-                  href={`tel:${PROFILE.phone.replace(/\s+/g, "")}`}
-                >
-                  <FiPhone aria-hidden="true" />
-                  <span>{PROFILE.phone}</span>
-                </a>
-              ) : null}
-            </div>
-          </div>
-        </motion.aside>
       </div>
     </AnimatedSection>
   );

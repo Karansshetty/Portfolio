@@ -2,6 +2,23 @@ import { motion } from "framer-motion";
 import { AnimatedSection } from "../components/AnimatedSection.jsx";
 import { sectionItemVariants } from "../components/animationVariants.js";
 import { EXPERIENCE } from "../data/portfolioData.js";
+import {
+  SiExpress,
+  SiGit,
+  SiGithub,
+  SiMongodb,
+  SiNodedotjs,
+  SiReact,
+} from "react-icons/si";
+
+const TECH_ICON_MAP = {
+  mongodb: { label: "MongoDB", Icon: SiMongodb, className: "tech-mongodb" },
+  express: { label: "Express", Icon: SiExpress, className: "tech-express" },
+  react: { label: "React", Icon: SiReact, className: "tech-react" },
+  node: { label: "Node.js", Icon: SiNodedotjs, className: "tech-node" },
+  git: { label: "Git", Icon: SiGit, className: "tech-git" },
+  github: { label: "GitHub", Icon: SiGithub, className: "tech-github" },
+};
 
 export default function ExperienceSection() {
   return (
@@ -24,7 +41,6 @@ export default function ExperienceSection() {
                 <h3 className="timeline-title">
                   {role.role} — {role.company}
                 </h3>
-                {role.tech ? <span className="badge badge-muted">{role.tech}</span> : null}
               </div>
               <p className="timeline-meta">{role.location}</p>
               <ul className="timeline-bullets">
@@ -32,6 +48,28 @@ export default function ExperienceSection() {
                   <li key={b}>{b}</li>
                 ))}
               </ul>
+
+              {Array.isArray(role.tech) && role.tech.length ? (
+                <div className="timeline-tech" aria-label="Technologies used">
+                  {role.tech.map((id) => {
+                    const item = TECH_ICON_MAP[id];
+                    if (!item) return null;
+
+                    return (
+                      <span
+                        key={id}
+                        className={`tech-icon ${item.className}`}
+                        role="img"
+                        aria-label={item.label}
+                        data-tooltip={item.label}
+                        tabIndex={0}
+                      >
+                        <item.Icon aria-hidden="true" focusable="false" />
+                      </span>
+                    );
+                  })}
+                </div>
+              ) : null}
             </div>
           </motion.article>
         ))}
