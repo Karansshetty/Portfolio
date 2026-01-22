@@ -105,7 +105,6 @@ export default function ContactSection() {
         <motion.div className="contact-card contact-formCard" variants={sectionItemVariants}>
           <h3 className="contact-title">Send a message</h3>
           <p className="contact-subtitle">
-            Prefer email? Use the form—your message will be sent directly.
           </p>
 
           <form className="contact-form" onSubmit={onSubmit}>

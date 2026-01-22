@@ -2,6 +2,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import "./App.css";
 
 import Navbar from "./components/Navbar.jsx";
+import CursorGlow from "./components/CursorGlow.jsx";
 import { useScroll } from "framer-motion";
 
 import { NAV_SECTIONS } from "./data/portfolioData.js";
@@ -55,6 +56,7 @@ function App() {
 
   return (
     <div className="app">
+      <CursorGlow />
       <Navbar
         sections={sections}
         activeSection={activeSection}
