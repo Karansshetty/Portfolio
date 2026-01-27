@@ -545,6 +545,35 @@
   }
 }
 
+@media (max-width: 768px) {
+  /* Mobile: prevent scroll indicator overlapping hero socials */
+  .hero-scroll-hint {
+    position: static;
+    left: auto;
+    bottom: auto;
+    transform: none;
+    margin: 18px auto 0;
+  }
+
+  /* Mobile: skills pills feel less cramped */
+  .skills-pyramid {
+    width: min(560px, 100%);
+    gap: 18px;
+  }
+
+  .skills-row {
+    justify-content: center;
+    gap: 14px 10px;
+  }
+
+  .skills-row-1,
+  .skills-row-2,
+  .skills-row-3,
+  .skills-row-4 {
+    max-width: 100%;
+  }
+}
+
 /* About (Hero-matched) */
 .section-about {
   min-height: 100vh;
