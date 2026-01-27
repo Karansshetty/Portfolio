@@ -1,13 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="KS">
   <defs>
-    <clipPath id="circle">
-      <circle cx="256" cy="256" r="256" />
-    </clipPath>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#A78BFA"/>
+      <stop offset="1" stop-color="#38BDF8"/>
+    </linearGradient>
+    <radialGradient id="r" cx="30%" cy="25%" r="75%">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
   </defs>
 
-  <!-- Clip the PNG logo into a circle for a round favicon look -->
-  <g clip-path="url(#circle)">
-    <image href="/KaranLogo.png" x="0" y="0" width="512" height="512" preserveAspectRatio="xMidYMid slice" />
-  </g>
+  <rect x="6" y="6" width="52" height="52" rx="18" fill="#0A0D16"/>
+  <rect x="6" y="6" width="52" height="52" rx="18" fill="url(#r)"/>
+  <rect x="6" y="6" width="52" height="52" rx="18" fill="none" stroke="url(#g)" stroke-width="2" opacity="0.9"/>
+
+  <text x="32" y="40" text-anchor="middle" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" font-size="22" font-weight="800" fill="url(#g)">KS</text>
 </svg>

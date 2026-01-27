@@ -5,6 +5,9 @@ import { PROFILE } from "../data/portfolioData.js";
 
 export default function Hero({ onViewProjects }) {
   const prefersReducedMotion = useReducedMotion();
+  const baseDelay = prefersReducedMotion ? 0 : 0.10;
+  const stagger = prefersReducedMotion ? 0 : 0.12;
+  const ease = "easeOut";
 
   return (
     <section id="home" className="hero section section-hero">
@@ -23,7 +26,7 @@ export default function Hero({ onViewProjects }) {
               className="hero-greeting"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.55, ease: "easeOut", delay: 0.05 }}
+              transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.55, ease, delay: baseDelay }}
             >
               Hi, I'm
             </motion.p>
@@ -33,7 +36,7 @@ export default function Hero({ onViewProjects }) {
                 className="hero-name"
                 initial={{ opacity: 0, y: 14 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.65, ease: "easeOut", delay: 0.22 }}
+                transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.65, ease, delay: baseDelay + stagger }}
               >
                 <span className="hero-name-gradient">{PROFILE.name}</span>
               </motion.h1>
@@ -43,9 +46,9 @@ export default function Hero({ onViewProjects }) {
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
-                  duration: 0.5,
-                  ease: "easeOut",
-                  delay: prefersReducedMotion ? 0 : 0.42,
+                  duration: prefersReducedMotion ? 0 : 0.5,
+                  ease,
+                  delay: baseDelay + stagger * 2,
                 }}
               >
                 {PROFILE.role || "Software Engineer"}
@@ -56,7 +59,7 @@ export default function Hero({ onViewProjects }) {
               className="hero-intro"
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, ease: "easeOut", delay: 0.48 }}
+              transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.7, ease, delay: baseDelay + stagger * 3 }}
             >
               {PROFILE.heroIntro || PROFILE.tagline}
             </motion.p>
@@ -65,7 +68,7 @@ export default function Hero({ onViewProjects }) {
               className="hero-cta"
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, ease: "easeOut", delay: 0.6 }}
+              transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.7, ease, delay: baseDelay + stagger * 4 }}
             >
               <button type="button" className="btn btn-primary" onClick={onViewProjects}>
                 View Projects <FiArrowDownRight />
@@ -80,7 +83,7 @@ export default function Hero({ onViewProjects }) {
               className="hero-social"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.65, ease: "easeOut", delay: 0.72 }}
+              transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.65, ease, delay: baseDelay + stagger * 5 }}
             >
               <a
                 className="hero-social-link"
@@ -107,18 +110,15 @@ export default function Hero({ onViewProjects }) {
 
           <div className="hero-media" aria-hidden="false">
             <motion.div
-              className="hero-avatarWrap"
-              animate={
-                prefersReducedMotion
-                  ? { y: 0 }
-                  : { y: [0, -10, 0] }
-              }
-              transition={
-                prefersReducedMotion
-                  ? { duration: 0 }
-                  : { duration: 6.5, ease: "easeInOut", repeat: Infinity }
-              }
+              initial={{ opacity: 0, scale: 0.99 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.75, ease, delay: baseDelay + stagger * 2 }}
             >
+              <motion.div
+                className="hero-avatarWrap"
+                animate={prefersReducedMotion ? { y: 0 } : { y: [0, -10, 0] }}
+                transition={prefersReducedMotion ? { duration: 0 } : { duration: 6.5, ease: "easeInOut", repeat: Infinity }}
+              >
               <img
                 className="hero-avatar"
                 src="/KaranLogo1.png"
@@ -126,6 +126,7 @@ export default function Hero({ onViewProjects }) {
                 loading="eager"
                 decoding="async"
               />
+              </motion.div>
             </motion.div>
           </div>
         </div>
