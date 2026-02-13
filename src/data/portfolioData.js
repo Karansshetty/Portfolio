@@ -19,7 +19,7 @@ export const PROFILE = {
     "I build clean, scalable web applications with a strong focus on reliability, performance, and user experience. I enjoy turning ideas into efficient digital solutions using modern web technologies.",
   roles: ["Software Engineer", "MERN Stack Developer", "Full Stack Developer"],
   avatarPath: "/KaranIntroimg1.png",
-  resumePath: "/Karan_Shetty_Resume_2025.pdf",
+  resumePath: "/KaranShetty_SoftwareDeveloper_Resume_2026.pdf",
   email: "karansshetty6@gmail.com",
   phone: "+91 76760 85605",
   socials: {

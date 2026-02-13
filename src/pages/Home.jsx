@@ -28,7 +28,7 @@ function Home() {
   </Link>
 
   <a
-    href="/Karan_Shetty_Resume_2025.pdf"
+    href="/KaranShetty_SoftwareDeveloper_Resume_2026.pdf"
     download
     className="glow-on-hover glow-outline"
   >
