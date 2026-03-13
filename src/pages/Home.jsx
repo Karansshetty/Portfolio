@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "../styles/Home.css";
 import { FaArrowRight } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { PROFILE } from "../data/portfolioData.js";
 
 function Home() {
   return (
@@ -28,7 +29,7 @@ function Home() {
   </Link>
 
   <a
-    href="/KaranShetty_SoftwareDeveloper_Resume_2026.pdf"
+    href={PROFILE.resumePath}
     download
     className="glow-on-hover glow-outline"
   >

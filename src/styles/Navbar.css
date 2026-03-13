@@ -163,6 +163,10 @@
 
 /* Mobile layout */
 @media (max-width: 768px) {
+  .navbar {
+    overflow: visible;
+  }
+
   .menu-btn {
     display: block;
     display: flex;
@@ -181,6 +185,8 @@
     top: 78px;
     left: 50%;
     transform: translateX(-50%);
+
+    z-index: 2;
 
     flex-direction: column;
     gap: 14px;
